@@ -216,11 +216,25 @@
 #         break
 #     print(f)
 
-numbers = [1, 2, 3, 4, 5, 6]
+# numbers = [1, 2, 3, 4, 5, 6]
 
-even = [i for i in numbers if i % 2 == 0]
+# even = [i for i in numbers if i % 2 == 0]
 
-print(even)  # Output: [2, 4, 6]
+# print(even)  # Output: [2, 4, 6]
 
+def my_decorator(func):
+    def wrapper():
+        print("Before the function runs")
+        func()
+        print("After the function runs")
+    return wrapper
+
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+
+say_hello()
 
 
