@@ -222,19 +222,30 @@
 
 # print(even)  # Output: [2, 4, 6]
 
-def my_decorator(func):
-    def wrapper():
-        print("Before the function runs")
-        func()
-        print("After the function runs")
-    return wrapper
+# def my_decorator(func):
+#     def wrapper():
+#         print("Before the function runs")
+#         func()
+#         print("After the function runs")
+#     return wrapper
 
 
-@my_decorator
-def say_hello():
-    print("Hello!")
+# @my_decorator
+# def say_hello():
+#     print("Hello!")
 
 
-say_hello()
+# say_hello()
 
+#Create a list of all odd numbers between 1 and a max number. 
+# Max number is something you need to take from a user using input() function
 
+max_num = int(input("Enter the max number: "))
+
+odd_numbers = []
+
+for i in range(1, max_num):
+    if i % 2 != 0:
+        odd_numbers.append(i)
+
+print("Odd numbers:", odd_numbers)
